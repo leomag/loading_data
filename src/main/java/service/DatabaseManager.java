@@ -5,13 +5,13 @@ import com.aragost.javahg.Changeset;
 import com.aragost.javahg.Repository;
 import com.aragost.javahg.commands.LogCommand;
 import model.RepositoryData;
-import org.apache.log4j.Logger;
-
 import java.io.File;
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * @author i.isaev on 27.01.2020
@@ -19,7 +19,7 @@ import java.util.List;
  */
 public class DatabaseManager extends DBConnection implements Runnable {
 
-    private final static Logger LOG = Logger.getLogger(DatabaseManager.class);
+    private final static Logger LOG = LogManager.getLogger(DatabaseManager.class);
 
     private static final String PATH_REPO = "/Users/isaev/Documents/uspd_spodes";
 

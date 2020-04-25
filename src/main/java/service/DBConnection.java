@@ -1,7 +1,7 @@
 package service;
 
-import org.apache.log4j.Logger;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -14,7 +14,7 @@ import java.util.Properties;
  */
 public class DBConnection {
 
-    private final static Logger LOG = Logger.getLogger(DBConnection.class);
+    private final static Logger LOG = LogManager.getLogger(DBConnection.class);
 
     protected static Connection connection() throws IOException {
         Connection dbConnection = null;
